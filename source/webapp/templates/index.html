@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<form action="calculate/" method="post">
+    {% csrf_token %}
+    <label>First number:</label>
+    <input type="number" name="first_number" required/><br/>
+    <label>Second number:</label>
+    <input type="number" name="second_number" required/><br/>
+    <br/>
+    <input type="radio" name="operations" value="add" checked>
+    <label>add</label>
+    <br>
+    <input type="radio" name="operations" value="subtract">
+    <label>subtract</label>
+    <br>
+    <input type="radio" name="operations" value="multiply">
+    <label>multiply</label>
+    <br>
+    <input type="radio" name="operations" value="divine">
+    <label>divine</label>
+    <br/>
+    <input type="submit" value="Calculate"/>
+</form>
+</body>
+</html>
